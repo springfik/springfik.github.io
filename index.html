@@ -4,15 +4,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<input type="text" id="f_name" placeholder="Введите имя">
-	<br><br>
-	<input type="text" id="s_name" placeholder="Введите фамилию">
-	<br><br>
-	<button id="sender">Отправить</button>
+	<div id="m_message">
+		<div id="r_message">
+			<button id="sellec">OK</button>
+		</div>
+	</div>
+	<div id="block_form">
+		<input type="text" class="names f_name" placeholder="Введите имя">
+
+		<input type="text" class="names s_name" placeholder="Введите фамилию">
 	
+		<button id="sender">Отправить</button>
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
 	<script id="main_scr" src="client.js"></script>
 </body>
 </html>

@@ -20,14 +20,33 @@ navigator.sayswho= (function(){
 
 var sender = document.getElementById('sender');
 
+var f_div = document.getElementById('m_message');
+var s_div = document.getElementById('r_message');
 
+var sellec = document.getElementById('sellec');
+var datas = document.createElement("pre");
 
  sender.onclick = function (e) {
 
+  var f_name = document.getElementsByClassName('f_name')[0].value;
+  var s_name = document.getElementsByClassName('s_name')[0].value;
+  var datas = document.createElement("pre");
+
+  datas.textContent = "Добрый день " + f_name + " " + s_name + "\n" + "Версия вашего браузера: " +  navigator.sayswho;
+
+  datas.id = 'asd'
+
+  s_div.insertBefore(datas, sellec);
+
+  f_div.style.display = 'block';
+
   
 
-  var f_name = document.getElementById('f_name').value;
-  var s_name = document.getElementById('s_name').value;
-
-  alert('Доброго времени суток ' + f_name + ' ' + s_name);
+  
 }; 
+
+sellec.onclick = function() {
+  s_div.removeChild(document.getElementById('asd'));
+
+  f_div.style.display = 'none';
+}
